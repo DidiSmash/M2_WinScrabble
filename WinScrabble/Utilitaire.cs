@@ -12,7 +12,7 @@ namespace WinScrabble
     public static class Utilitaire
     {
         /// <summary>
-        /// Méthode qui retourne le nombre de points que rapporte une lettre
+        /// Méthode qui retourne le nombre de points que rapporte une lettre test
         /// </summary>
         /// <param name="l">Lettre de type char</param>
         /// <returns>Nombre de points rapportés par la lettre</returns>
