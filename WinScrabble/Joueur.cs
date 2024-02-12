@@ -38,7 +38,8 @@ namespace WinScrabble
         /// <param name="unMot">mot proposé par le joueur</param>
         public void AjouterMot(string unMot)
         {
-            //TODO
+            this.lesMots.Add(unMot);
+            this.totalPoints += Utilitaire.PointsMot(unMot);
         }
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace WinScrabble
         public int GetTotalPoints()
         {
             //TODO
-            return 0;
+            return this.totalPoints;
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace WinScrabble
         public int GetNbMots()
         {
             //TODO
-            return 0;
+            return this.lesMots.Count;
         }
         /// <summary>
         /// retourne la liste des mots du joueur
@@ -67,7 +68,7 @@ namespace WinScrabble
         public List<string> GetLesMots()
         {
             //TODO
-            return null;
+            return this.lesMots;
         }
 
         /// <summary>
@@ -77,8 +78,20 @@ namespace WinScrabble
         /// <returns>mot qui a rapporté le plus grand nombre de points</returns>
         public string MotMeilleur()
         {
+            string topMot = "";
+            int nbmaxMot = 0;
             //TODO
-            return "";
+            foreach (string mot in this.lesMots)
+            {
+                int nb = Utilitaire.PointsMot(mot);
+                if (nb > nbmaxMot)
+                {
+                    topMot = mot;
+                    nbmaxMot = nb;
+                }
+            }
+            
+            return topMot;
         }
         #endregion
     }
