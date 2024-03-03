@@ -81,6 +81,7 @@ namespace WinScrabble
             this.tbP1.Name = "tbP1";
             this.tbP1.Size = new System.Drawing.Size(220, 20);
             this.tbP1.TabIndex = 2;
+            this.tbP1.TextChanged += new System.EventHandler(this.tbP1_TextChanged);
             // 
             // tbP2
             // 
@@ -88,9 +89,11 @@ namespace WinScrabble
             this.tbP2.Name = "tbP2";
             this.tbP2.Size = new System.Drawing.Size(220, 20);
             this.tbP2.TabIndex = 3;
+            this.tbP2.TextChanged += new System.EventHandler(this.tbP2_TextChanged);
             // 
             // btnPValider
             // 
+            this.btnPValider.Enabled = false;
             this.btnPValider.Location = new System.Drawing.Point(298, 66);
             this.btnPValider.Name = "btnPValider";
             this.btnPValider.Size = new System.Drawing.Size(101, 30);
@@ -133,7 +136,7 @@ namespace WinScrabble
             this.txtManche.Name = "txtManche";
             this.txtManche.Size = new System.Drawing.Size(78, 13);
             this.txtManche.TabIndex = 8;
-            this.txtManche.Text = "Manche ? / 10";
+            this.txtManche.Text = "Manche 0 / 10";
             // 
             // txtScoreP1
             // 
@@ -156,11 +159,11 @@ namespace WinScrabble
             // txtSelectPlayer
             // 
             this.txtSelectPlayer.AutoSize = true;
-            this.txtSelectPlayer.Location = new System.Drawing.Point(295, 136);
+            this.txtSelectPlayer.Location = new System.Drawing.Point(305, 136);
             this.txtSelectPlayer.Name = "txtSelectPlayer";
-            this.txtSelectPlayer.Size = new System.Drawing.Size(101, 13);
+            this.txtSelectPlayer.Size = new System.Drawing.Size(94, 26);
             this.txtSelectPlayer.TabIndex = 11;
-            this.txtSelectPlayer.Text = "txtSelectPlayer.Text";
+            this.txtSelectPlayer.Text = "Choisissez un nom\r\net lancer la partie !";
             this.txtSelectPlayer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtMotEnter
@@ -174,6 +177,7 @@ namespace WinScrabble
             // 
             // btnValider
             // 
+            this.btnValider.Enabled = false;
             this.btnValider.Location = new System.Drawing.Point(298, 311);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(101, 30);
@@ -184,13 +188,16 @@ namespace WinScrabble
             // 
             // tbMot
             // 
+            this.tbMot.Enabled = false;
             this.tbMot.Location = new System.Drawing.Point(268, 265);
             this.tbMot.Name = "tbMot";
             this.tbMot.Size = new System.Drawing.Size(164, 20);
             this.tbMot.TabIndex = 14;
+            this.tbMot.TextChanged += new System.EventHandler(this.tbMot_TextChanged);
             // 
             // tbL1
             // 
+            this.tbL1.Enabled = false;
             this.tbL1.Location = new System.Drawing.Point(247, 222);
             this.tbL1.Name = "tbL1";
             this.tbL1.Size = new System.Drawing.Size(24, 20);
@@ -198,6 +205,7 @@ namespace WinScrabble
             // 
             // tbL2
             // 
+            this.tbL2.Enabled = false;
             this.tbL2.Location = new System.Drawing.Point(277, 222);
             this.tbL2.Name = "tbL2";
             this.tbL2.Size = new System.Drawing.Size(24, 20);
@@ -205,6 +213,7 @@ namespace WinScrabble
             // 
             // tbL3
             // 
+            this.tbL3.Enabled = false;
             this.tbL3.Location = new System.Drawing.Point(307, 222);
             this.tbL3.Name = "tbL3";
             this.tbL3.Size = new System.Drawing.Size(24, 20);
@@ -212,6 +221,7 @@ namespace WinScrabble
             // 
             // tbL4
             // 
+            this.tbL4.Enabled = false;
             this.tbL4.Location = new System.Drawing.Point(337, 222);
             this.tbL4.Name = "tbL4";
             this.tbL4.Size = new System.Drawing.Size(24, 20);
@@ -219,6 +229,7 @@ namespace WinScrabble
             // 
             // tbL5
             // 
+            this.tbL5.Enabled = false;
             this.tbL5.Location = new System.Drawing.Point(367, 222);
             this.tbL5.Name = "tbL5";
             this.tbL5.Size = new System.Drawing.Size(24, 20);
@@ -226,6 +237,7 @@ namespace WinScrabble
             // 
             // tbL6
             // 
+            this.tbL6.Enabled = false;
             this.tbL6.Location = new System.Drawing.Point(397, 222);
             this.tbL6.Name = "tbL6";
             this.tbL6.Size = new System.Drawing.Size(24, 20);
@@ -233,6 +245,7 @@ namespace WinScrabble
             // 
             // tbL7
             // 
+            this.tbL7.Enabled = false;
             this.tbL7.Location = new System.Drawing.Point(427, 222);
             this.tbL7.Name = "tbL7";
             this.tbL7.Size = new System.Drawing.Size(24, 20);
@@ -240,6 +253,7 @@ namespace WinScrabble
             // 
             // tbScoreP1
             // 
+            this.tbScoreP1.Enabled = false;
             this.tbScoreP1.Location = new System.Drawing.Point(657, 286);
             this.tbScoreP1.Name = "tbScoreP1";
             this.tbScoreP1.Size = new System.Drawing.Size(41, 20);
@@ -247,6 +261,7 @@ namespace WinScrabble
             // 
             // tbScoreP2
             // 
+            this.tbScoreP2.Enabled = false;
             this.tbScoreP2.Location = new System.Drawing.Point(657, 317);
             this.tbScoreP2.Name = "tbScoreP2";
             this.tbScoreP2.Size = new System.Drawing.Size(41, 20);
@@ -254,6 +269,7 @@ namespace WinScrabble
             // 
             // tbMeilleurMot
             // 
+            this.tbMeilleurMot.Enabled = false;
             this.tbMeilleurMot.Location = new System.Drawing.Point(87, 189);
             this.tbMeilleurMot.Name = "tbMeilleurMot";
             this.tbMeilleurMot.Size = new System.Drawing.Size(90, 20);
@@ -301,7 +317,6 @@ namespace WinScrabble
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmScrabble";
             this.Text = "JEU DU SCRABBLE - MODE 2 JOUEURS";
-            this.Load += new System.EventHandler(this.FrmScrabble_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

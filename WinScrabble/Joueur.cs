@@ -43,6 +43,15 @@ namespace WinScrabble
         }
 
         /// <summary>
+        /// retourne le nom du joueur
+        /// </summary>
+        /// <returns>nom du joueur</returns>
+        public string GetNom()
+        { 
+            return this.nom;
+        }
+
+        /// <summary>
         /// retourne le nombre total de points du joueur
         /// </summary>
         /// <returns>nombre total de points du joueur</returns>
