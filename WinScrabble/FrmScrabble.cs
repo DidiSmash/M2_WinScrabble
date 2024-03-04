@@ -15,6 +15,7 @@ namespace WinScrabble
     {
         int player = 0;
         double manche = 1;
+        bool Entered = false;
 
         Joueur Player1;
         Joueur Player2;
@@ -49,7 +50,14 @@ namespace WinScrabble
 
             Random rng = new Random();
             player = rng.Next(1, 3);
-            txtSelectPlayer.Text = "Joueur " + player + "\nà toi d’entrer un mot!";
+            if (player == 1)
+            {
+                txtSelectPlayer.Text = Player1.GetNom() + "\nà toi d’entrer un mot!";
+            } else
+            {
+                txtSelectPlayer.Text = Player2.GetNom() + "\nà toi d’entrer un mot!";
+            }
+
             txtManche.Text = "Manche " + manche + " / 10";
 
             //ramdom tout les nbr
@@ -71,9 +79,26 @@ namespace WinScrabble
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            if (manche > 10.5)
+            if (manche > 10)
             {
                 btnValider.Enabled = false;
+
+                if (player == 1)
+                {
+                    player = 2;
+                    manche += 0.5;
+                    Player1.AjouterMot(tbMot.Text);
+                    tbScoreP1.Text = Player1.GetTotalPoints().ToString();
+                    txtSelectPlayer.Text = Player2.GetNom() + "\nà toi d’entrer un mot!";
+                }
+                else
+                {
+                    player = 1;
+                    manche += 0.5;
+                    Player2.AjouterMot(tbMot.Text);
+                    tbScoreP2.Text = Player2.GetTotalPoints().ToString();
+                    txtSelectPlayer.Text = Player1.GetNom() + "\nà toi d’entrer un mot!";
+                }
 
                 if (Player1.GetTotalPoints() > Player2.GetTotalPoints())
                 {
@@ -102,6 +127,7 @@ namespace WinScrabble
                     manche += 0.5;
                     Player1.AjouterMot(tbMot.Text);
                     tbScoreP1.Text = Player1.GetTotalPoints().ToString();
+                    txtSelectPlayer.Text = Player2.GetNom() + "\nà toi d’entrer un mot!";
                 }
                 else
                 {
@@ -109,8 +135,9 @@ namespace WinScrabble
                     manche += 0.5;
                     Player2.AjouterMot(tbMot.Text);
                     tbScoreP2.Text = Player2.GetTotalPoints().ToString();
+                    txtSelectPlayer.Text = Player1.GetNom() + "\nà toi d’entrer un mot!";
                 }
-                txtSelectPlayer.Text = "Joueur " + player + "\nà toi d’entrer un mot!";
+
                 if (manche > 9.5)
                 {
                     txtManche.Text = "Dernière Manche !";
@@ -138,6 +165,29 @@ namespace WinScrabble
                 btnValider.Enabled = false;
             else
                 btnValider.Enabled = true;
+        }
+
+        private void btnChar1_Click(object sender, EventArgs e)
+        {
+
+            if (Entered == false)
+            {
+                Entered = true;
+
+                tbMot.Text += btnChar1.Text;
+                Console.WriteLine(btnChar1.Text);
+            } else
+            {
+                Entered = false;
+
+                //tbMot.Text -= btnChar1.Text;
+                Console.WriteLine("supr L");
+            }
+        }
+
+        private void btnChar2_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("entre A");
         }
     }
 }

@@ -66,10 +66,10 @@ namespace WinScrabble
         public static string RandomChar()
         {
             Thread.Sleep(1);
-            string[] alphabet = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+            string alphabet = "aaaabcdeeeefghiiiijklmnoooopqrstuuuuvwxyz";
             Random rand = new Random((int)DateTime.Now.Ticks);
 
-            return alphabet[rand.Next(0, 26)];
+            return Char.ToString(alphabet[rand.Next(0, 26)]);
         }
 
     }

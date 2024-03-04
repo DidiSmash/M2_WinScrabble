@@ -55,6 +55,8 @@ namespace WinScrabble
             this.tbScoreP2 = new System.Windows.Forms.TextBox();
             this.tbMeilleurMot = new System.Windows.Forms.TextBox();
             this.lbMots = new System.Windows.Forms.ListBox();
+            this.btnChar1 = new System.Windows.Forms.Button();
+            this.btnChar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtP1
@@ -105,11 +107,11 @@ namespace WinScrabble
             // txtWinner
             // 
             this.txtWinner.AutoSize = true;
-            this.txtWinner.Location = new System.Drawing.Point(84, 136);
+            this.txtWinner.Location = new System.Drawing.Point(95, 136);
             this.txtWinner.Name = "txtWinner";
-            this.txtWinner.Size = new System.Drawing.Size(93, 13);
+            this.txtWinner.Size = new System.Drawing.Size(52, 13);
             this.txtWinner.TabIndex = 5;
-            this.txtWinner.Text = "gagnant : joueur ?";
+            this.txtWinner.Text = "gagnant :";
             // 
             // txtMeilleurMot
             // 
@@ -283,11 +285,33 @@ namespace WinScrabble
             this.lbMots.Size = new System.Drawing.Size(120, 108);
             this.lbMots.TabIndex = 25;
             // 
+            // btnChar1
+            // 
+            this.btnChar1.Location = new System.Drawing.Point(218, 286);
+            this.btnChar1.Name = "btnChar1";
+            this.btnChar1.Size = new System.Drawing.Size(40, 20);
+            this.btnChar1.TabIndex = 26;
+            this.btnChar1.Text = "L";
+            this.btnChar1.UseVisualStyleBackColor = true;
+            this.btnChar1.Click += new System.EventHandler(this.btnChar1_Click);
+            // 
+            // btnChar2
+            // 
+            this.btnChar2.Location = new System.Drawing.Point(218, 321);
+            this.btnChar2.Name = "btnChar2";
+            this.btnChar2.Size = new System.Drawing.Size(40, 20);
+            this.btnChar2.TabIndex = 27;
+            this.btnChar2.Text = "A";
+            this.btnChar2.UseVisualStyleBackColor = true;
+            this.btnChar2.Click += new System.EventHandler(this.btnChar2_Click);
+            // 
             // FrmScrabble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 361);
+            this.Controls.Add(this.btnChar2);
+            this.Controls.Add(this.btnChar1);
             this.Controls.Add(this.lbMots);
             this.Controls.Add(this.tbMeilleurMot);
             this.Controls.Add(this.tbScoreP2);
@@ -351,6 +375,8 @@ namespace WinScrabble
         private System.Windows.Forms.TextBox tbScoreP2;
         private System.Windows.Forms.TextBox tbMeilleurMot;
         private System.Windows.Forms.ListBox lbMots;
+        private System.Windows.Forms.Button btnChar1;
+        private System.Windows.Forms.Button btnChar2;
     }
 }
 
