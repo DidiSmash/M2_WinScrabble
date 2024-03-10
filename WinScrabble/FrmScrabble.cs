@@ -15,7 +15,13 @@ namespace WinScrabble
     {
         int player = 0;
         double manche = 1;
-        bool Entered = false;
+        bool C1Entered = false;
+        bool C2Entered = false;
+        bool C3Entered = false;
+        bool C4Entered = false;
+        bool C5Entered = false;
+        bool C6Entered = false;
+        bool C7Entered = false;
 
         Joueur Player1;
         Joueur Player2;
@@ -60,28 +66,50 @@ namespace WinScrabble
 
             txtManche.Text = "Manche " + manche + " / 10";
 
-            //ramdom tout les nbr
-            tbL1.Text = Utilitaire.RandomChar();
-            tbL2.Text = Utilitaire.RandomChar();
-            tbL3.Text = Utilitaire.RandomChar();
-            tbL4.Text = Utilitaire.RandomChar();
-            tbL5.Text = Utilitaire.RandomChar();
-            tbL6.Text = Utilitaire.RandomChar();
-            tbL7.Text = Utilitaire.RandomChar();
+            //upd
+            btnChar1.Text = Utilitaire.RandomChar();
+            btnChar2.Text = Utilitaire.RandomChar();
+            btnChar3.Text = Utilitaire.RandomChar();
+            btnChar4.Text = Utilitaire.RandomChar();
+            btnChar5.Text = Utilitaire.RandomChar();
+            btnChar6.Text = Utilitaire.RandomChar();
+            btnChar7.Text = Utilitaire.RandomChar();
 
             btnPValider.Enabled = false;
             tbP1.Enabled = false;
             tbP2.Enabled = false;
 
-            tbMot.Enabled = true;
+            btnChar1.Enabled = true;
+            btnChar2.Enabled = true;
+            btnChar3.Enabled = true;
+            btnChar4.Enabled = true;
+            btnChar5.Enabled = true;
+            btnChar6.Enabled = true;
+            btnChar7.Enabled = true;
 
         }
 
         private void btnValider_Click(object sender, EventArgs e)
         {
+            C1Entered = false;
+            C2Entered = false;
+            C3Entered = false;
+            C4Entered = false;
+            C5Entered = false;
+            C6Entered = false;
+            C7Entered = false;
+
             if (manche > 10)
             {
                 btnValider.Enabled = false;
+
+                btnChar1.Enabled = false;
+                btnChar2.Enabled = false;
+                btnChar3.Enabled = false;
+                btnChar4.Enabled = false;
+                btnChar5.Enabled = false;
+                btnChar6.Enabled = false;
+                btnChar7.Enabled = false;
 
                 if (player == 1)
                 {
@@ -148,14 +176,14 @@ namespace WinScrabble
                 
                 tbMot.Text = "";
 
-                //ramdom tout les nbr
-                tbL1.Text = Utilitaire.RandomChar();
-                tbL2.Text = Utilitaire.RandomChar();
-                tbL3.Text = Utilitaire.RandomChar();
-                tbL4.Text = Utilitaire.RandomChar();
-                tbL5.Text = Utilitaire.RandomChar();
-                tbL6.Text = Utilitaire.RandomChar();
-                tbL7.Text = Utilitaire.RandomChar();
+                //upd
+                btnChar1.Text = Utilitaire.RandomChar();
+                btnChar2.Text = Utilitaire.RandomChar();
+                btnChar3.Text = Utilitaire.RandomChar();
+                btnChar4.Text = Utilitaire.RandomChar();
+                btnChar5.Text = Utilitaire.RandomChar();
+                btnChar6.Text = Utilitaire.RandomChar();
+                btnChar7.Text = Utilitaire.RandomChar();
             }
         }
 
@@ -170,24 +198,113 @@ namespace WinScrabble
         private void btnChar1_Click(object sender, EventArgs e)
         {
 
-            if (Entered == false)
+            if (C1Entered == false)
             {
-                Entered = true;
+                C1Entered = true;
 
                 tbMot.Text += btnChar1.Text;
-                Console.WriteLine(btnChar1.Text);
             } else
             {
-                Entered = false;
+                C1Entered = false;
 
-                //tbMot.Text -= btnChar1.Text;
-                Console.WriteLine("supr L");
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar1.Text), 1);
             }
         }
 
         private void btnChar2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("entre A");
+            if (C2Entered == false)
+            {
+                C2Entered = true;
+
+                tbMot.Text += btnChar2.Text;
+            }
+            else
+            {
+                C2Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar2.Text), 1);
+            }
+        }
+
+        private void btnChar3_Click(object sender, EventArgs e)
+        {
+            if (C3Entered == false)
+            {
+                C3Entered = true;
+
+                tbMot.Text += btnChar3.Text;
+            }
+            else
+            {
+                C3Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar3.Text), 1);
+            }
+        }
+
+        private void btnChar4_Click(object sender, EventArgs e)
+        {
+            if (C4Entered == false)
+            {
+                C4Entered = true;
+
+                tbMot.Text += btnChar4.Text;
+            }
+            else
+            {
+                C4Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar4.Text), 1);
+            }
+        }
+
+        private void btnChar5_Click(object sender, EventArgs e)
+        {
+            if (C5Entered == false)
+            {
+                C5Entered = true;
+
+                tbMot.Text += btnChar5.Text;
+            }
+            else
+            {
+                C5Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar5.Text), 1);
+            }
+        }
+
+        private void btnChar6_Click(object sender, EventArgs e)
+        {
+            if (C6Entered == false)
+            {
+                C6Entered = true;
+
+                tbMot.Text += btnChar6.Text;
+            }
+            else
+            {
+                C6Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar6.Text), 1);
+            }
+        }
+
+        private void btnChar7_Click(object sender, EventArgs e)
+        {
+            if (C7Entered == false)
+            {
+                C7Entered = true;
+
+                tbMot.Text += btnChar7.Text;
+            }
+            else
+            {
+                C7Entered = false;
+
+                tbMot.Text = tbMot.Text.Remove(tbMot.Text.IndexOf(btnChar7.Text), 1);
+            }
         }
     }
 }

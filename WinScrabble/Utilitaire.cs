@@ -69,7 +69,7 @@ namespace WinScrabble
             string alphabet = "aaaabcdeeeefghiiiijklmnoooopqrstuuuuvwxyz";
             Random rand = new Random((int)DateTime.Now.Ticks);
 
-            return Char.ToString(alphabet[rand.Next(0, 26)]);
+            return Char.ToString(alphabet[rand.Next(0, 26)]).ToUpper();
         }
 
     }

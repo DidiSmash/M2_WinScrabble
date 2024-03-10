@@ -18,3 +18,13 @@ C:\Users\Tonione\Desktop\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.csproj
 C:\Users\Tonione\Desktop\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.csproj.CoreCompileInputs.cache
 C:\Users\Tonione\Desktop\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.exe
 C:\Users\Tonione\Desktop\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.pdb
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\bin\Debug\WinScrabble.exe.config
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\bin\Debug\WinScrabble.exe
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\bin\Debug\WinScrabble.pdb
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.csproj.AssemblyReference.cache
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.FrmScrabble.resources
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.Properties.Resources.resources
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.csproj.GenerateResource.cache
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.exe
+C:\Users\Administrateur\Desktop\Nouveau dossier\M2_WinScrabble\WinScrabble\obj\Debug\WinScrabble.pdb

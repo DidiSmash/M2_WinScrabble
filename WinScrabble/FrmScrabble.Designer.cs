@@ -44,19 +44,17 @@ namespace WinScrabble
             this.txtMotEnter = new System.Windows.Forms.Label();
             this.btnValider = new System.Windows.Forms.Button();
             this.tbMot = new System.Windows.Forms.TextBox();
-            this.tbL1 = new System.Windows.Forms.TextBox();
-            this.tbL2 = new System.Windows.Forms.TextBox();
-            this.tbL3 = new System.Windows.Forms.TextBox();
-            this.tbL4 = new System.Windows.Forms.TextBox();
-            this.tbL5 = new System.Windows.Forms.TextBox();
-            this.tbL6 = new System.Windows.Forms.TextBox();
-            this.tbL7 = new System.Windows.Forms.TextBox();
             this.tbScoreP1 = new System.Windows.Forms.TextBox();
             this.tbScoreP2 = new System.Windows.Forms.TextBox();
             this.tbMeilleurMot = new System.Windows.Forms.TextBox();
             this.lbMots = new System.Windows.Forms.ListBox();
             this.btnChar1 = new System.Windows.Forms.Button();
             this.btnChar2 = new System.Windows.Forms.Button();
+            this.btnChar3 = new System.Windows.Forms.Button();
+            this.btnChar4 = new System.Windows.Forms.Button();
+            this.btnChar5 = new System.Windows.Forms.Button();
+            this.btnChar6 = new System.Windows.Forms.Button();
+            this.btnChar7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtP1
@@ -191,67 +189,11 @@ namespace WinScrabble
             // tbMot
             // 
             this.tbMot.Enabled = false;
-            this.tbMot.Location = new System.Drawing.Point(268, 265);
+            this.tbMot.Location = new System.Drawing.Point(274, 270);
             this.tbMot.Name = "tbMot";
-            this.tbMot.Size = new System.Drawing.Size(164, 20);
+            this.tbMot.Size = new System.Drawing.Size(147, 20);
             this.tbMot.TabIndex = 14;
             this.tbMot.TextChanged += new System.EventHandler(this.tbMot_TextChanged);
-            // 
-            // tbL1
-            // 
-            this.tbL1.Enabled = false;
-            this.tbL1.Location = new System.Drawing.Point(247, 222);
-            this.tbL1.Name = "tbL1";
-            this.tbL1.Size = new System.Drawing.Size(24, 20);
-            this.tbL1.TabIndex = 15;
-            // 
-            // tbL2
-            // 
-            this.tbL2.Enabled = false;
-            this.tbL2.Location = new System.Drawing.Point(277, 222);
-            this.tbL2.Name = "tbL2";
-            this.tbL2.Size = new System.Drawing.Size(24, 20);
-            this.tbL2.TabIndex = 16;
-            // 
-            // tbL3
-            // 
-            this.tbL3.Enabled = false;
-            this.tbL3.Location = new System.Drawing.Point(307, 222);
-            this.tbL3.Name = "tbL3";
-            this.tbL3.Size = new System.Drawing.Size(24, 20);
-            this.tbL3.TabIndex = 17;
-            // 
-            // tbL4
-            // 
-            this.tbL4.Enabled = false;
-            this.tbL4.Location = new System.Drawing.Point(337, 222);
-            this.tbL4.Name = "tbL4";
-            this.tbL4.Size = new System.Drawing.Size(24, 20);
-            this.tbL4.TabIndex = 18;
-            // 
-            // tbL5
-            // 
-            this.tbL5.Enabled = false;
-            this.tbL5.Location = new System.Drawing.Point(367, 222);
-            this.tbL5.Name = "tbL5";
-            this.tbL5.Size = new System.Drawing.Size(24, 20);
-            this.tbL5.TabIndex = 19;
-            // 
-            // tbL6
-            // 
-            this.tbL6.Enabled = false;
-            this.tbL6.Location = new System.Drawing.Point(397, 222);
-            this.tbL6.Name = "tbL6";
-            this.tbL6.Size = new System.Drawing.Size(24, 20);
-            this.tbL6.TabIndex = 20;
-            // 
-            // tbL7
-            // 
-            this.tbL7.Enabled = false;
-            this.tbL7.Location = new System.Drawing.Point(427, 222);
-            this.tbL7.Name = "tbL7";
-            this.tbL7.Size = new System.Drawing.Size(24, 20);
-            this.tbL7.TabIndex = 21;
             // 
             // tbScoreP1
             // 
@@ -287,42 +229,90 @@ namespace WinScrabble
             // 
             // btnChar1
             // 
-            this.btnChar1.Location = new System.Drawing.Point(218, 286);
+            this.btnChar1.Enabled = false;
+            this.btnChar1.Location = new System.Drawing.Point(244, 222);
             this.btnChar1.Name = "btnChar1";
-            this.btnChar1.Size = new System.Drawing.Size(40, 20);
+            this.btnChar1.Size = new System.Drawing.Size(24, 24);
             this.btnChar1.TabIndex = 26;
-            this.btnChar1.Text = "L";
             this.btnChar1.UseVisualStyleBackColor = true;
             this.btnChar1.Click += new System.EventHandler(this.btnChar1_Click);
             // 
             // btnChar2
             // 
-            this.btnChar2.Location = new System.Drawing.Point(218, 321);
+            this.btnChar2.Enabled = false;
+            this.btnChar2.Location = new System.Drawing.Point(274, 222);
             this.btnChar2.Name = "btnChar2";
-            this.btnChar2.Size = new System.Drawing.Size(40, 20);
+            this.btnChar2.Size = new System.Drawing.Size(24, 24);
             this.btnChar2.TabIndex = 27;
-            this.btnChar2.Text = "A";
             this.btnChar2.UseVisualStyleBackColor = true;
             this.btnChar2.Click += new System.EventHandler(this.btnChar2_Click);
+            // 
+            // btnChar3
+            // 
+            this.btnChar3.Enabled = false;
+            this.btnChar3.Location = new System.Drawing.Point(304, 222);
+            this.btnChar3.Name = "btnChar3";
+            this.btnChar3.Size = new System.Drawing.Size(24, 24);
+            this.btnChar3.TabIndex = 28;
+            this.btnChar3.UseVisualStyleBackColor = true;
+            this.btnChar3.Click += new System.EventHandler(this.btnChar3_Click);
+            // 
+            // btnChar4
+            // 
+            this.btnChar4.Enabled = false;
+            this.btnChar4.Location = new System.Drawing.Point(334, 222);
+            this.btnChar4.Name = "btnChar4";
+            this.btnChar4.Size = new System.Drawing.Size(24, 24);
+            this.btnChar4.TabIndex = 29;
+            this.btnChar4.UseVisualStyleBackColor = true;
+            this.btnChar4.Click += new System.EventHandler(this.btnChar4_Click);
+            // 
+            // btnChar5
+            // 
+            this.btnChar5.Enabled = false;
+            this.btnChar5.Location = new System.Drawing.Point(364, 222);
+            this.btnChar5.Name = "btnChar5";
+            this.btnChar5.Size = new System.Drawing.Size(24, 24);
+            this.btnChar5.TabIndex = 30;
+            this.btnChar5.UseVisualStyleBackColor = true;
+            this.btnChar5.Click += new System.EventHandler(this.btnChar5_Click);
+            // 
+            // btnChar6
+            // 
+            this.btnChar6.Enabled = false;
+            this.btnChar6.Location = new System.Drawing.Point(394, 222);
+            this.btnChar6.Name = "btnChar6";
+            this.btnChar6.Size = new System.Drawing.Size(24, 24);
+            this.btnChar6.TabIndex = 31;
+            this.btnChar6.UseVisualStyleBackColor = true;
+            this.btnChar6.Click += new System.EventHandler(this.btnChar6_Click);
+            // 
+            // btnChar7
+            // 
+            this.btnChar7.Enabled = false;
+            this.btnChar7.Location = new System.Drawing.Point(424, 222);
+            this.btnChar7.Name = "btnChar7";
+            this.btnChar7.Size = new System.Drawing.Size(24, 24);
+            this.btnChar7.TabIndex = 32;
+            this.btnChar7.UseVisualStyleBackColor = true;
+            this.btnChar7.Click += new System.EventHandler(this.btnChar7_Click);
             // 
             // FrmScrabble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 361);
+            this.Controls.Add(this.btnChar7);
+            this.Controls.Add(this.btnChar6);
+            this.Controls.Add(this.btnChar5);
+            this.Controls.Add(this.btnChar4);
+            this.Controls.Add(this.btnChar3);
             this.Controls.Add(this.btnChar2);
             this.Controls.Add(this.btnChar1);
             this.Controls.Add(this.lbMots);
             this.Controls.Add(this.tbMeilleurMot);
             this.Controls.Add(this.tbScoreP2);
             this.Controls.Add(this.tbScoreP1);
-            this.Controls.Add(this.tbL7);
-            this.Controls.Add(this.tbL6);
-            this.Controls.Add(this.tbL5);
-            this.Controls.Add(this.tbL4);
-            this.Controls.Add(this.tbL3);
-            this.Controls.Add(this.tbL2);
-            this.Controls.Add(this.tbL1);
             this.Controls.Add(this.tbMot);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtMotEnter);
@@ -364,19 +354,17 @@ namespace WinScrabble
         private System.Windows.Forms.Label txtMotEnter;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.TextBox tbMot;
-        private System.Windows.Forms.TextBox tbL1;
-        private System.Windows.Forms.TextBox tbL2;
-        private System.Windows.Forms.TextBox tbL3;
-        private System.Windows.Forms.TextBox tbL4;
-        private System.Windows.Forms.TextBox tbL5;
-        private System.Windows.Forms.TextBox tbL6;
-        private System.Windows.Forms.TextBox tbL7;
         private System.Windows.Forms.TextBox tbScoreP1;
         private System.Windows.Forms.TextBox tbScoreP2;
         private System.Windows.Forms.TextBox tbMeilleurMot;
         private System.Windows.Forms.ListBox lbMots;
         private System.Windows.Forms.Button btnChar1;
         private System.Windows.Forms.Button btnChar2;
+        private System.Windows.Forms.Button btnChar3;
+        private System.Windows.Forms.Button btnChar4;
+        private System.Windows.Forms.Button btnChar5;
+        private System.Windows.Forms.Button btnChar6;
+        private System.Windows.Forms.Button btnChar7;
     }
 }
 
